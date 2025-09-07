@@ -44,7 +44,7 @@ below:
   |vietnamese-vni_utf-8|, you must type `ne61n`, not `nen61` or `ne6n1`
 - For characters with more than 1 diacritic, you need to type vowel mark before
   tone mark. For example, to type `ồ` using |vietnamese-telex_utf-8|, you need
-  to type `oof`, not `ofo`.
+  to type `oof`, not `of`.
 - With |vietnamese-telex_utf-8|, you need to type all uppercase letters to
   produce uppercase characters with diacritics. For example, `Ừ` must be typed
   as `UWF`.

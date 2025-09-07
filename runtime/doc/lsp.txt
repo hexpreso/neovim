@@ -26,7 +26,7 @@ Follow these steps to get LSP features:
 
 1. Install language servers using your package manager or by following the
    upstream installation instructions. You can find language servers here:
-   https://microsoft.github.io/language-server-protocol/implementors/servers/
+   https://microsoft.github.io/language-server-protocol/implementers/servers/
 
 2. Define a new config |lsp-new-config| (or install https://github.com/neovim/nvim-lspconfig).
    Example: >lua
@@ -774,8 +774,8 @@ Lua module: vim.lsp                                                 *lsp-core*
                          client will attach to all filetypes.
       • {reuse_client}?  (`fun(client: vim.lsp.Client, config: vim.lsp.ClientConfig): boolean`)
                          Predicate which decides if a client should be
-                         re-used. Used on all running clients. The default
-                         implementation re-uses a client if name and root_dir
+                         reused. Used on all running clients. The default
+                         implementation reuses a client if name and root_dir
                          matches.
       • {root_dir}?      (`string|fun(bufnr: integer, on_dir:fun(root_dir?:string))`)
                          *lsp-root_dir()* Decides the workspace root: the
@@ -1188,7 +1188,7 @@ start({config}, {opts})                                      *vim.lsp.start()*
       server.
     • `cmd` command string[] or function.
     • `root_dir` path to the project root. By default this is used to decide
-      if an existing client should be re-used. The example above uses
+      if an existing client should be reused. The example above uses
       |vim.fs.root()| to detect the root by traversing the file system upwards
       starting from the current directory until either a `pyproject.toml` or
       `setup.py` file is found.
@@ -1214,13 +1214,13 @@ start({config}, {opts})                                      *vim.lsp.start()*
       • {opts}    (`table?`) Optional keyword arguments.
                   • {reuse_client}?
                     (`fun(client: vim.lsp.Client, config: vim.lsp.ClientConfig): boolean`)
-                    Predicate used to decide if a client should be re-used.
+                    Predicate used to decide if a client should be reused.
                     Used on all running clients. The default implementation
-                    re-uses a client if it has the same name and if the given
+                    reuses a client if it has the same name and if the given
                     workspace folders (or root_dir) are all included in the
                     client's workspace folders.
                   • {bufnr}? (`integer`) Buffer handle to attach to if
-                    starting or re-using a client (0 for current).
+                    starting or reusing a client (0 for current).
                   • {attach}? (`boolean`) Whether to attach the client to a
                     buffer (default true). If set to `false`, `reuse_client`
                     and `bufnr` will be ignored.

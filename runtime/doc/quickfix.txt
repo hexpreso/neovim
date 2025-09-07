@@ -169,8 +169,8 @@ processing a quickfix or location list command, it will be aborted.
 :[count]lbe[fore]	Same as ":cbefore", except the location list for the
 			current window is used instead of the quickfix list.
 
-							*:caf* *:cafter*
-:[count]caf[ter]	Go to the [count] error after the current cursor
+							*:calf* *:cafter*
+:[count]calf[ter]	Go to the [count] error after the current cursor
 			position in the current buffer.  If [count] is
 			omitted, then 1 is used.  If there are no errors, then
 			an error message is displayed.  Assumes that the
@@ -311,7 +311,7 @@ processing a quickfix or location list command, it will be aborted.
 			current window is used instead of the quickfix list.
 
 						*:cb* *:cbuffer* *E681*
-:[range]cb[uffer][!] [bufnr]
+:[range]cb[buffer][!] [bufnr]
 			Read the error list from the current buffer.
 			When [bufnr] is given it must be the number of a
 			loaded buffer.  That buffer will then be used instead
@@ -321,17 +321,17 @@ processing a quickfix or location list command, it will be aborted.
 			See |:cc| for [!].
 
 						*:lb* *:lbuffer*
-:[range]lb[uffer][!] [bufnr]
+:[range]lb[buffer][!] [bufnr]
 			Same as ":cbuffer", except the location list for the
 			current window is used instead of the quickfix list.
 
 						*:cgetb* *:cgetbuffer*
-:[range]cgetb[uffer] [bufnr]
+:[range]cgetb[buffer] [bufnr]
 			Read the error list from the current buffer.  Just
 			like ":cbuffer" but don't jump to the first error.
 
 						*:lgetb* *:lgetbuffer*
-:[range]lgetb[uffer] [bufnr]
+:[range]lgetb[buffer] [bufnr]
 			Same as ":cgetbuffer", except the location list for
 			the current window is used instead of the quickfix
 			list.
@@ -344,7 +344,7 @@ processing a quickfix or location list command, it will be aborted.
 			created. Otherwise, same as ":cbuffer".
 
 							*:laddb* *:laddbuffer*
-:[range]laddb[uffer] [bufnr]
+:[range]laddb[buffer] [bufnr]
 			Same as ":caddbuffer", except the location list for
 			the current window is used instead of the quickfix
 			list.
@@ -537,7 +537,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 			autocommand event is disabled by adding it to
 			'eventignore'.  This considerably speeds up editing
 			each buffer.
-			Also see |:bufdo|, |:tabdo|, |:argdo|, |:windo|,
+			Also see |:bufdo|, |:tabdo|, |:argdo|, |:window|,
 			|:ldo|, |:cfdo| and |:lfdo|.
 
 							*:cfdo*

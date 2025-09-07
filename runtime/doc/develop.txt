@@ -412,7 +412,7 @@ Naming is exceedingly important: the name of a thing is the primary interface
 for uses it, discusses it, searches for it, shares it... Consistent
 naming in the stdlib, API, and UI helps both users and developers discover and
 intuitively understand related concepts ("families"), and reduces cognitive
-burden. Discoverability encourages code re-use and likewise avoids redundant,
+burden. Discoverability encourages code reuse and likewise avoids redundant,
 overlapping mechanisms, which reduces code surface-area, and thereby minimizes
 bugs...
 

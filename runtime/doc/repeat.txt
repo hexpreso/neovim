@@ -214,7 +214,7 @@ For writing a Vim script, see chapter 41 of the user manual |usr_41.txt|.
 
 							*:source!*
 :so[urce]! {file}	Runs |Normal-mode| commands from {file}. When used
-			after |:global|, |:argdo|, |:windo|, |:bufdo|, in
+			after |:global|, |:argdo|, |:window|, |:bufdo|, in
 			a loop or when another command follows the display
 			won't be updated while executing the commands.
 
@@ -750,8 +750,8 @@ LISTING BREAKPOINTS
 
 OBSCURE
 
-						*:debugg* *:debuggreedy*
-:debugg[reedy]
+						*:debug* *:debuggreedy*
+:debug[reedy]
 		Read debug mode commands from the normal input stream, instead
 		of getting them directly from the user.  Only useful for test
 		scripts.  Example: >

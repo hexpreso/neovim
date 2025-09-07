@@ -24,7 +24,7 @@ each tab page.  With the mouse you can click on the label to jump to that tab
 page.  There are other ways to move between tab pages, see below.
 
 Most commands work only in the current tab page.  That includes the |CTRL-W|
-commands, |:windo|, |:all| and |:ball| (when not using the |:tab| modifier).
+commands, |:window|, |:all| and |:ball| (when not using the |:tab| modifier).
 The commands that are aware of other tab pages than the current one are
 mentioned below.
 
@@ -224,8 +224,8 @@ gT		Go to the previous tab page.  Wraps around from the first one
 :tabr[ewind]			*:tabfir* *:tabfirst* *:tabr* *:tabrewind*
 :tabfir[st]	Go to the first tab page.
 
-							*:tabl* *:tablast*
-:tabl[ast]	Go to the last tab page.
+							*:table* *:tablast*
+:table[ast]	Go to the last tab page.
 
 <C-Tab>						*CTRL-<Tab>* *<C-Tab>*
 g<Tab>						*g<Tab>* *CTRL-W_g<Tab>*
@@ -298,7 +298,7 @@ LOOPING OVER TAB PAGES:
 		current tab page.
 		{cmd} can contain '|' to concatenate several commands.
 		{cmd} must not open or close tab pages or reorder them.
-		Also see |:windo|, |:argdo|, |:bufdo|, |:cdo|, |:ldo|, |:cfdo|
+		Also see |:window|, |:argdo|, |:bufdo|, |:cdo|, |:ldo|, |:cfdo|
 		and |:lfdo|.
 
 ==============================================================================

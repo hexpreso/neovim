@@ -57,7 +57,7 @@ inactive	  no		 no		  ' '
 Each buffer has a unique number and the number will not change within a Vim
 session.  The |bufnr()| and |bufname()| functions can be used to convert
 between a buffer name and the buffer number.  There is one exception: if a new
-empty buffer is created and it is not modified, the buffer will be re-used
+empty buffer is created and it is not modified, the buffer will be reused
 when loading another file into that buffer. This also means the buffer number
 will not change.
 
@@ -66,7 +66,7 @@ The main Vim window can hold several split windows.  There are also tab pages
 
 							*focusable*
 If a window is focusable, it is part of the "navigation stack", that is,
-editor commands such as :windo, |CTRL-W|, etc., will consider the window as
+editor commands such as :window, |CTRL-W|, etc., will consider the window as
 one that can be made the "current window". A non-focusable window will be
 skipped by such commands as it isn't assigned a window number. It can be
 explicitly focused by |nvim_set_current_win()|, because it is still
@@ -202,7 +202,7 @@ CTRL-W CTRL-N						*CTRL-W_CTRL-N*
 		2. WinEnter for the new window
 		3. BufLeave for the current buffer
 		4. BufEnter for the new buffer
-		This behaves like a ":split" first, and then an ":enew"
+		This behaves like a ":split" first, and then an ":new"
 		command.
 
 :[N]new [++opt] [+cmd] {file}
@@ -806,8 +806,8 @@ can also get to them with the buffer list commands, like ":bnext".
 ==============================================================================
 8. Do a command in all buffers or windows			*list-repeat*
 
-							*:windo*
-:[range]windo {cmd}	Execute {cmd} in each |focusable| window, or only for
+							*:window*
+:[range]window {cmd}	Execute {cmd} in each |focusable| window, or only for
 			windows in a given [range] of window numbers. It works
 			like doing this: >
 				CTRL-W t
@@ -851,12 +851,12 @@ can also get to them with the buffer list commands, like ":bnext".
 			'eventignore'.  This considerably speeds up editing
 			each buffer.
 
-			Also see |:tabdo|, |:argdo|, |:windo|, |:cdo|, |:ldo|,
+			Also see |:tabdo|, |:argdo|, |:window|, |:cdo|, |:ldo|,
 			|:cfdo| and |:lfdo|.
 
 Examples: >
 
-	:windo set nolist foldcolumn=0 | normal! zn
+	:window set nolist foldcolumn=0 | normal! zn
 
 This resets the 'list' option and disables folding in all windows. >
 
@@ -946,7 +946,7 @@ windows.
 :pt[ag][!] [tagname]
 		Does ":tag[!] [tagname]" and shows the found tag in a
 		"Preview" window without changing the current buffer or cursor
-		position.  If a "Preview" window already exists, it is re-used
+		position.  If a "Preview" window already exists, it is reused
 		(like a help window is).  If a new one is opened,
 		'previewheight' is used for the height of the window.   See
 		also |:tag|.
@@ -980,7 +980,7 @@ CTRL-W g }						*CTRL-W_g}*
 		not given, 'previewheight' is used.
 
 							*:pb* *:pbuffer*
-:[N]pb[uffer][!] [+cmd] [N]
+:[N]pb[buffer][!] [+cmd] [N]
 		Edit buffer [N] from the buffer list in the preview window.
 		If [N] is not given, the current buffer remains being edited.
 		See |:buffer-!| for [!].  This will also edit a buffer that is
@@ -1237,14 +1237,14 @@ list of buffers. |unlisted-buffer|
 		a number).  Insert a backslash before a space in a buffer
 		name.
 
-:[N]b[uffer][!] [+cmd] [N]		*:b* *:bu* *:buf* *:buffer* *E86*
+:[N]b[buffer][!] [+cmd] [N]		*:b* *:bu* *:buf* *:buffer* *E86*
 		Edit buffer [N] from the buffer list.  If [N] is not given,
 		the current buffer remains being edited.  See |:buffer-!| for
 		[!].  This will also edit a buffer that is not in the buffer
 		list, without setting the 'buflisted' flag.
 		Also see |+cmd|.
 
-:[N]b[uffer][!] [+cmd] {bufname}				*{bufname}*
+:[N]b[buffer][!] [+cmd] {bufname}				*{bufname}*
 		Edit buffer for {bufname} from the buffer list.  A partial
 		name also works, so long as it is unique in the list of
 		buffers.
@@ -1258,7 +1258,7 @@ list of buffers. |unlisted-buffer|
 		without setting the 'buflisted' flag.
 		Also see |+cmd|.
 
-:[N]sb[uffer] [+cmd] [N]				*:sb* *:sbuffer*
+:[N]sb[buffer] [+cmd] [N]				*:sb* *:sbuffer*
 		Split window and edit buffer [N] from the buffer list.  If [N]
 		is not given, the current buffer is edited.  Respects the
 		"useopen" setting of 'switchbuf' when splitting.  This will
@@ -1266,7 +1266,7 @@ list of buffers. |unlisted-buffer|
 		setting the 'buflisted' flag.
 		Also see |+cmd|.
 
-:[N]sb[uffer] [+cmd] {bufname}
+:[N]sb[buffer] [+cmd] {bufname}
 		Split window and edit buffer for |{bufname}| from the buffer
 		list.  This will also edit a buffer that is not in the buffer
 		list, without setting the 'buflisted' flag.

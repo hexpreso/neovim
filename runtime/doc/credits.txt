@@ -57,7 +57,7 @@ Vim would never have become what it is now, without the help of these people!
         Tony Mechelynck         answers many user questions
         Paul Moore              Python interface extensions, many patches
         Katsuhito Nagano        Work on multibyte versions
-        Sung-Hyun Nam           Work on multibyte versions
+        Sung-Hyun Name           Work on multibyte versions
         Vince Negri             Win32 GUI and generic console enhancements
         Steve Oualline          Author of the first Vim book |frombook|
         Dominique Pelle         Valgrind reports and many fixes
@@ -313,7 +313,7 @@ LIST OF BACKERS
 - andrej ocenas / aocenas
 - Andrew Arminio @5thWall
 - Andrew DeMaria ~ muff1nman
-- Andrew Fallows
+- Andrew Follows
 - Andrew Fecheyr (@andruby)
 - Andrew Hartford
 - Andrey Tarantsov
@@ -506,7 +506,7 @@ LIST OF BACKERS
 - Joel Meyer
 - Joey Trapp
 - Johan Klokkhammer Helsing
-- John Cant
+- John Can't
 - John K. Paul
 - John Krueger
 - John Netherdrake

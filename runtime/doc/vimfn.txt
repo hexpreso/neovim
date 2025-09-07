@@ -7523,7 +7523,7 @@ printf({fmt}, {expr1} ...)                                            *printf()*
 		    %3$s%1$s
 
 							*E1502*
-		You can re-use a [field-width] (or [precision]) argument: >vim
+		You can reuse a [field-width] (or [precision]) argument: >vim
 		    echo printf("%1$d at width %2$d is: %01$*2$d", 1, 2)
 <		    1 at width 2 is: 01
 

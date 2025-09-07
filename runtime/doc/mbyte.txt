@@ -761,7 +761,7 @@ These options are relevant for editing multibyte files.
 
 Contributions specifically for the multibyte features by:
 	Chi-Deok Hwang <hwang@mizi.co.kr>
-	SungHyun Nam <goweol@gmail.com>
+	SungHyun Name <goweol@gmail.com>
 	K.Nagano <nagano@atese.advantest.co.jp>
 	Taro Muraoka  <koron@tka.att.ne.jp>
 	Yasuhiro Matsumoto <mattn@mail.goo.ne.jp>

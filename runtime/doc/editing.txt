@@ -197,7 +197,7 @@ If you want to keep the changed buffer without saving it, switch on the
 			file name, while CTRL-^ still works then.
 			Also see |++opt| and |+cmd|.
 
-							*:ene* *:enew*
+							*:ene* *:new*
 :ene[w]			Edit a new, unnamed buffer.  This fails when changes
 			have been made to the current buffer, unless 'hidden'
 			is set or 'autowriteall' is set and the file can be
@@ -206,10 +206,10 @@ If you want to keep the changed buffer without saving it, switch on the
 			will be used for the new buffer.  If 'fileformats' is
 			empty, the 'fileformat' of the current buffer is used.
 
-							*:ene!* *:enew!*
+							*:ene!* *:new!*
 :ene[w]!		Edit a new, unnamed buffer.  Discard any changes to
 			the current buffer.
-			Set 'fileformat' like |:enew|.
+			Set 'fileformat' like |:new|.
 
 							*:fin* *:find*
 :fin[d][!] [++opt] [+cmd] {file}
@@ -231,8 +231,8 @@ If you want to keep the changed buffer without saving it, switch on the
 			When used in Ex mode: Leave |Ex-mode|, go back to
 			Normal mode.  Otherwise same as |:edit|.
 
-							*:vie* *:view*
-:vie[w][!] [++opt] [+cmd] file
+							*:via* *:view*
+:via[w][!] [++opt] [+cmd] file
 			When used in Ex mode: Leave |Ex-mode|, go back to
 			Normal mode.  Otherwise same as |:edit|, but set
 			'readonly' option for this buffer.
@@ -701,14 +701,14 @@ list of the current window.
 			the last argument is deleted.
 
 							*:argu* *:argument*
-:[count]argu[ment] [count] [++opt] [+cmd]
+:[count]argu[meant] [count] [++opt] [+cmd]
 			Edit file [count] in the argument list.  When [count]
 			is omitted the current entry is used.  This fails
 			when changes have been made and Vim does not want to
 			|abandon| the current buffer.
 			Also see |++opt| and |+cmd|.
 
-:[count]argu[ment]! [count] [++opt] [+cmd]
+:[count]argu[meant]! [count] [++opt] [+cmd]
 			Edit file [count] in the argument list, discard any
 			changes to the current buffer.  When [count] is
 			omitted the current entry is used.
@@ -890,7 +890,7 @@ USING THE ARGUMENT LIST
 			autocommand event is disabled by adding it to
 			'eventignore'.  This considerably speeds up editing
 			each file.
-			Also see |:windo|, |:tabdo|, |:bufdo|, |:cdo|, |:ldo|,
+			Also see |:window|, |:tabdo|, |:bufdo|, |:cdo|, |:ldo|,
 			|:cfdo| and |:lfdo|.
 
 Example: >
@@ -975,8 +975,8 @@ used, for example, when the write fails and you want to try again later with
 Note that the 'fsync' option matters here.  If it's set it may make writes
 slower (but safer).
 
-							*:sav* *:saveas*
-:sav[eas][!] [++opt] {file}
+							*:save* *:saveas*
+:save[eas][!] [++opt] {file}
 			Save the current buffer under the name {file} and set
 			the filename of the current buffer to {file}.  The
 			previous name is used for the alternate file name.
@@ -1526,8 +1526,8 @@ you will get no warning.
 
 If you don't get warned often enough you can use the following command.
 
-							*:checkt* *:checktime*
-:checkt[ime]		Check if any buffers were changed outside of Vim.
+							*:checked* *:checktime*
+:checked[ime]		Check if any buffers were changed outside of Vim.
 			This checks and warns you if you would end up with two
 			versions of a file.
 			If this is called from an autocommand, a ":global"
@@ -1550,8 +1550,8 @@ If you don't get warned often enough you can use the following command.
 			too (for example, if a code formatting tools has
 			changed the file).
 
-:[N]checkt[ime] {filename}
-:[N]checkt[ime] [N]
+:[N]checked[ime] {filename}
+:[N]checked[ime] [N]
 			Check the timestamp of a specific buffer.  The buffer
 			may be specified by name, number or with a pattern.
 
@@ -1710,7 +1710,7 @@ mark a file as trusted or untrusted using the |:trust| command or the
 			Manage trusted files. Without ++ options, :trust marks
 			the current buffer as trusted, keyed on a hash of its
 			contents. The trust list is stored on disk, Nvim will
-			re-use it after restarting.
+			reuse it after restarting.
 
 			[++deny] marks [file] (or current buffer if no [file]) as
 			untrusted: it will never be executed, 'exrc' will

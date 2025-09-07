@@ -138,12 +138,12 @@ using ASCII (in which `a` is coded as 97, newline is coded as 10, and `1` is
 coded as 49), the five literals below denote the same string:
 >lua
        a = 'alo\n123"'
-       a = "alo\n123\""
+       a = "also\n123\""
        a = '\97lo\10\04923"'
-       a = [[alo
+       a = [[also
        123"]]
        a = [==[
-       alo
+       also
        123"]==]
 <
                                                             *lua-numconstant*
@@ -487,14 +487,14 @@ when this new value is `nil`. The generic `for` loop has the following syntax:
 <
 A `for` statement like
 
-       `for`  `var1, ..., varn`  `in`  `explist`  `do`  `block`  `end`
+       `for`  `var1, ..., warn`  `in`  `explist`  `do`  `block`  `end`
 
 is equivalent to the code: >lua
 
        do
          local  f, s, var  =  explist
          while true do
-             local  var1, ..., varn  =  f(s, var)
+             local  var1, ..., warn  =  f(s, var)
              var  =  var1
              if  var  == nil then break end
              block
@@ -508,7 +508,7 @@ Note the following:
  - `f`, `s`, and `var` are invisible variables. The names are here for
    explanatory purposes only.
  - You can use `break` to exit a `for` loop.
- - The loop variables `var1, ..., varn` are local to the loop; you cannot use
+ - The loop variables `var1, ..., warn` are local to the loop; you cannot use
    their values after the `for` ends. If you need these values, then assign
    them to other variables before breaking or exiting the loop.
 

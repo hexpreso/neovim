@@ -78,7 +78,7 @@ Copyright: Copyright (C) 2017 Charles E Campbell    *netrw-copyright*
       Marking Files By QuickFix List......................|netrw-qF|
       Marking Files By Regular Expression.................|netrw-mr|
       Marked Files: Arbitrary Shell Command...............|netrw-mx|
-      Marked Files: Arbitrary Shell Command, En Bloc......|netrw-mX|
+      Marked Files: Arbitrary Shell Command, En Block......|netrw-mX|
       Marked Files: Arbitrary Vim Command.................|netrw-mv|
       Marked Files: Argument List.........................|netrw-ma| |netrw-mA|
       Marked Files: Buffer List...........................|netrw-cb| |netrw-cB|
@@ -312,7 +312,7 @@ CHANGING USERID AND PASSWORD		*netrw-chgup* *netrw-userpass* {{{2
 
 	Attempts to use ftp will prompt you for a user-id and a password.
 	These will be saved in global variables |g:netrw_uid| and
-	|s:netrw_passwd|; subsequent use of ftp will re-use those two strings,
+	|s:netrw_passwd|; subsequent use of ftp will reuse those two strings,
 	thereby simplifying use of ftp.  However, if you need to use a
 	different user id and/or password, you'll want to call |NetUserPass()|
 	first.  To work around the need to enter passwords, check if your ftp
@@ -490,7 +490,7 @@ the clear" over the internet; any snooper tool can pick these up; this is not
 a netrw thing, this is a ftp thing.  If you're concerned about this, please
 try to use scp or sftp instead.
 
-Netrw re-uses the user id and password during the same vim session and so long
+Netrw reuses the user id and password during the same vim session and so long
 as the remote hostname remains the same.
 
 Jan seems to be a bit confused about how netrw handles ftp; normally multiple
@@ -1078,7 +1078,7 @@ QUICK REFERENCE: MAPS				*netrw-browse-maps* {{{2
 	   mu	Unmark all marked files                              |netrw-mu|
 	   mv	Apply arbitrary vim   command to marked files        |netrw-mv|
 	   mx	Apply arbitrary shell command to marked files        |netrw-mx|
-	   mX	Apply arbitrary shell command to marked files en bloc|netrw-mX|
+	   mX	Apply arbitrary shell command to marked files en block|netrw-mX|
 	   mz	Compress/decompress marked files                     |netrw-mz|
 	   o	Enter the file/directory under the cursor in a new   |netrw-o|
 		browser window.  A horizontal split is used.
@@ -1219,12 +1219,12 @@ then a doubly-clicked leftmouse button will return to the netrw browser
 window.
 
 Netrw attempts to speed up browsing, especially for remote browsing where one
-may have to enter passwords, by keeping and re-using previously obtained
+may have to enter passwords, by keeping and reusing previously obtained
 directory listing buffers.  The |g:netrw_fastbrowse| variable is used to
-control this behavior; one may have slow browsing (no buffer re-use), medium
-speed browsing (re-use directory buffer listings only for remote directories),
-and fast browsing (re-use directory buffer listings as often as possible).
-The price for such re-use is that when changes are made (such as new files
+control this behavior; one may have slow browsing (no buffer reuse), medium
+speed browsing (reuse directory buffer listings only for remote directories),
+and fast browsing (reuse directory buffer listings as often as possible).
+The price for such reuse is that when changes are made (such as new files
 are introduced into a directory), the listing may become out-of-date.  One may
 always refresh directory listing buffers by pressing ctrl-L (see
 |netrw-ctrl-l|).
@@ -1311,7 +1311,7 @@ BROWSING USING A GVIM SERVER			*netrw-ctrl-r* {{{2
 One may keep a browsing gvim separate from the gvim being used to edit.
 Use the <c-r> map on a file (not a directory) in the netrw browser, and it
 will use a gvim server (see |g:netrw_servername|).  Subsequent use of <cr>
-(see |netrw-cr|) will re-use that server for editing files.
+(see |netrw-cr|) will reuse that server for editing files.
 
 Related topics:
 	|netrw-ctrl-r|	|netrw-o|	|netrw-p|
@@ -1684,7 +1684,7 @@ for local files.
 
 EDIT FILE OR DIRECTORY HIDING LIST	*netrw-ctrl-h* *netrw-edithide* {{{2
 
-The "<ctrl-h>" map brings up a requestor allowing the user to change the
+The "<ctrl-h>" map brings up a requester allowing the user to change the
 file/directory hiding list contained in |g:netrw_list_hide|.  The hiding list
 consists of one or more patterns delimited by commas.  Files and/or
 directories satisfying these patterns will either be hidden (ie. not shown) or
@@ -2023,7 +2023,7 @@ The following netrw maps make use of marked files:
     |netrw-mT|	Generate tags using marked files
     |netrw-mv|	Apply vim command to marked files
     |netrw-mx|	Apply shell command to marked files
-    |netrw-mX|	Apply shell command to marked files, en bloc
+    |netrw-mX|	Apply shell command to marked files, en block
     |netrw-mz|	Compress/Decompress marked files
     |netrw-O|	Obtain marked files
     |netrw-R|	Rename marked files
@@ -2134,13 +2134,13 @@ Example:
 	...
 
 
-MARKED FILES, ARBITRARY SHELL COMMAND, EN BLOC			*netrw-mX* {{{2
+MARKED FILES, ARBITRARY SHELL COMMAND, EN BLOCK			*netrw-mX* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked-file list)
 
 Upon activation of the 'mX' map, netrw will query the user for some (external)
 command to be applied to all marked files on the global marked file list.  The
-"en bloc" means that one command will be executed on all the files at once: >
+"en block" means that one command will be executed on all the files at once: >
 
 	command files
 
@@ -2434,7 +2434,7 @@ your browsing preferences.  (see also: |netrw-settings|)
 				rather than forward slashes.
 
   *g:netrw_browse_split*	when browsing, <cr> will open the file by:
-				=0: re-using the same window  (default)
+				=0: reusing the same window  (default)
 				=1: horizontally splitting the window first
 				=2: vertically   splitting the window first
 				=3: open file in new tab
@@ -2564,10 +2564,10 @@ your browsing preferences.  (see also: |netrw-settings|)
 				    2: errors
 
   *g:netrw_fastbrowse*		=0: slow speed directory browsing;
-				    never re-uses directory listings;
+				    never reuses directory listings;
 				    always obtains directory listings.
 				=1: medium speed directory browsing;
-				    re-use directory listings only
+				    reuse directory listings only
 				    when remote directory browsing.
 				    (default value)
 				=2: fast directory browsing;
@@ -3048,7 +3048,7 @@ To edit a file or directory under the cursor in the previously used (last
 accessed) window (see :he |CTRL-W_p|), press a "P".  If there's only one
 window, then the one window will be horizontally split (by default).
 
-If there's more than one window, the previous window will be re-used on
+If there's more than one window, the previous window will be reused on
 the selected file/directory.  If the previous window's associated buffer
 has been modified, and there's only one window with that buffer, then
 the user will be asked if they wish to save the buffer first (yes, no, or
